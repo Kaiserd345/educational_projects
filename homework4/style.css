@@ -4,9 +4,15 @@
     box-sizing: border-box;
 }
 
+/*MAIN STYLE FOR ALL LINKS*/
 a {
     text-decoration: none;
-    color: #fff;
+    color: #3cb878;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #329a65;
 }
 
 /*START SPRITE ICONS*/
@@ -24,18 +30,24 @@ a {
 
 /*END SPRITE ICONS*/
 
-body {
-    font-family: Verdana, sans-serif;
-    font-size: 14px;
-}
-
-.clearfix {
+/*CLEARFIX FOR FLOATS*/
+.clearfix:before {
     content: " ";
     visibility: hidden;
     display: block;
     height: 0;
     clear: both;
 }
+
+body {
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+    background-image: url("./img/body_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+/*HEADER*/
 
 .header {
     position: sticky;
@@ -44,6 +56,7 @@ body {
     background-color: rgba(0, 0, 0,.41);
 }
 
+/*LOGO*/
 .header__logo {
     float: left;
     height: 100%;
@@ -52,6 +65,7 @@ body {
 }
 
 .header__logo a {
+    color: #fff;
     font-size: 20px;
     font-weight: 900;
     text-transform: uppercase;
@@ -59,9 +73,12 @@ body {
 }
 
 .header__logo a:hover {
-    color: #33895b;
+    color: #329a65;
+    text-decoration: none;
 }
+/*END LOGO*/
 
+/*DASHBOARD*/
 .header-dashboard {
     float: right;
 }
@@ -85,11 +102,215 @@ body {
     padding-left: 30px;
     border-left: 1px solid #32302e;
 }
+/*END DASHBOARD*/
 
-.dashboard__auth a {
-    color: #33895b;
+/*MAIN*/
+
+/*FORM*/
+.form {
+    position: relative;
+    max-width: 440px;
+    margin: 50px auto 0;
+    background: #fff;
+    border-radius: 10px;
 }
 
-.dashboard__auth a:hover {
-    text-decoration: underline;
+/*DECOR SQUARE*/
+.form-enter__square {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background-color: #3cb878;
+}
+
+.form-content {
+    padding: 30px 55px;
+}
+
+/*FORM TITLE SECTION*/
+.form__title {
+    float: left;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.form__login {
+    display: inline-block;
+    float: right;
+    line-height: 24px;
+}
+
+/*SOCIAL BUTTONS SECTION*/
+.form-content-social {
+    position: relative;
+    padding-bottom: 39px;
+    border-bottom: 1px solid #eaeaea;
+    margin: 35px 0 15px ;
+}
+
+.form-content-social div{
+    display: inline-block;
+    position: relative;
+    width: 49.2%;
+    height: 48px;
+    border-radius: 3px;
+}
+
+.form-content-social div a {
+    display: block;
+    line-height: 20px;
+    color: #fff;
+    margin: 9px 0 9px 48px;
+    padding: 5px 0 5px 25px;
+    border-left: 1px solid #eaeaea;
+}
+
+.form-content-social div a:hover {
+    text-decoration: none;
+}
+
+.form-content-social a:before {
+    position: absolute;
+    top: 0;
+    left: 2px;
+    font-family: "Font Awesome 5 Brands";
+    text-align: center;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 20px;
+}
+
+.form-content-social .social__facebook a:before {
+    content: "\f39e";
+}
+
+.form-content-social .social__google a:before {
+    content: "\f0d5";
+}
+
+.form-content-social .social__facebook {
+    background-color: #305db8;
+}
+
+.form-content-social .social__facebook:hover {
+    background-color: #264b96;
+}
+
+.form-content-social .social__google {
+    background-color: #df4a32;
+}
+
+.form-content-social .social__google:hover {
+    background-color: #c3412c;
+}
+
+
+/*OR SEPARATOR*/
+.form-content-social:after {
+    display: block;
+    content: "or";
+    position: absolute;
+    bottom: -15px;
+    left: 145px;
+    background-color: #fff;
+    padding: 10px 15px;
+}
+/*END SOCIAL BUTTONS SECTION*/
+
+/*FORM INPUTS*/
+.form-content .form__field, .form-content input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 8px;
+    background: #fff;
+    line-height: 40px;
+    border: 1px solid #eaeaea;
+    border-radius: 3px;
+}
+
+.form-content .form__checkbox + label {
+    display: inline-block;
+    margin: 20px 0;
+}
+
+.form-content input[type="submit"] {
+    font-size: 16px;
+    background-color: #3cb878;
+    color: #fff;
+    cursor: pointer;
+}
+
+.form-content input[type="submit"]:hover {
+    background-color: #329a65;
+}
+
+.form-content input:focus {
+    outline: none;
+    -webkit-box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.41);
+    -moz-box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.41);
+    box-shadow: 0px 3px 5px 3px rgba(0,0,0,0.41);
+}
+
+/*CHECKBOX STYLING*/
+input[type="checkbox"]:checked,
+input[type="checkbox"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+input[type="checkbox"]:checked + label,
+input[type="checkbox"]:not(:checked) + label {
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label:before,
+input[type="checkbox"]:not(:checked) + label:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+
+input[type="checkbox"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:after{
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 4px;
+    width: 10px;
+    height: 5px;
+    border-radius: 1px;
+    border-left: 4px solid #3cb878;
+    border-bottom: 4px solid #3cb878;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked + label:after {
+    opacity: 1;
 }

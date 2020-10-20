@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
@@ -26,7 +27,24 @@
         </div>
     </header>
     <main>
-
+        <form action="index.html" class="form" name="sign_up_form" enctype="application/x-www-form-urlencoded" method="post" target="_blank">
+            <div class="form-enter__square"></div>
+            <div class="form-content">
+                <h2 class="form__title">Sign Up</h2>
+                <a class="form__login" href="#">Log In</a>
+                <div class="form-content-social clearfix">
+                    <div class="social__facebook"><a href="#">Facebook</a></div>
+                    <div class="social__google"><a href="#">Google</a></div>
+                </div>
+                <input type="text" class="form__field" name="form-firstname" placeholder="First Name" value="Jason" required autofocus>
+                <input type="text" class="form__field" name="form-lastname" placeholder="Last Name" required>
+                <input type="email" class="form__field" name="form-email" placeholder="Email" required>
+                <input type="password" class="form__field" name="form-password" placeholder="Choose password" required>
+                <input type="password" class="form__field" name="form-confirm-password" placeholder="Confirm password" required>
+                <input id="conditions" type="checkbox" class="form__checkbox" name="conditions" required checked><label for="conditions">Agree our <a href="#">Terms & Conditions</a></label>
+                <input type="submit" name="form-submit" value="Create Account">
+            </div>
+        </form>
     </main>
     <footer>
 
