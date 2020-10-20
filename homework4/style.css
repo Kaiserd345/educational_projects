@@ -222,10 +222,10 @@ body {
     display: block;
     content: "or";
     position: absolute;
-    bottom: -15px;
+    bottom: -6px;
     left: 145px;
     background-color: #fff;
-    padding: 10px 15px;
+    padding: 0px 15px;
 }
 /*END SOCIAL BUTTONS SECTION*/
 
