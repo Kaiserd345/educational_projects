@@ -1,0 +1,160 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #3a4965;
+}
+
+table {
+    width: 1170px;
+    margin: 50px auto;
+    text-align: center;
+    border-collapse: collapse;
+    font-family: 'Arimo', sans-serif;
+    font-size: 16px;
+    color: #848484;
+    text-transform: uppercase;
+}
+
+td, th {
+    padding: 15px 20px;
+    -webkit-box-shadow: -1px 0px 0px 0px rgba(189,189,189,1);
+    -moz-box-shadow: -1px 0px 0px 0px rgba(189,189,189,1);
+    box-shadow: -1px 0px 0px 0px rgba(189,189,189,1);
+}
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #e3e3e3;
+}
+
+th.first-col, td.first-col {
+
+}
+
+.main-title, tr.pricing td{
+    background-color: #fff;
+}
+
+.main-title {
+    font-size: 18px;
+}
+
+.main-title span {
+    font-size: 30px;
+    font-weight: 900;
+    color: #484848;
+}
+
+/*Pricing row*/
+.pricing {
+    text-align: left;
+    line-height: 22px;
+}
+
+.pricing .pricing-usd {
+    float: left;
+    font-size: 50px;
+    line-height: 50px;
+    color: #484848;
+}
+
+.pricing .pricing-cent {
+    font-size: 20px;
+    line-height: 20px;
+    color: #484848;
+}
+
+/*Plans row*/
+.plans {
+    color: #fff;
+    font-size: 20px;
+}
+
+.standard-plan {
+    background-color: #89c331;
+}
+
+.ultimate-plan {
+    background-color: #f04a56;
+}
+
+.premium-plan {
+    background-color: #20807c;
+}
+
+/*Buttons*/
+.confirm-button {
+    position: relative;
+    width: 190px;
+    padding: 2px;
+    margin: 20px auto;
+    border-radius: 3px;
+}
+
+.confirm-button:after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 5px;
+    background-color: rgba(0,0,0,.21);
+    border-radius: 5px;
+}
+
+.confirm-button a {
+    display: block;
+    padding: 10px 15px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.button-contact {
+    background-color: #484848;
+}
+
+.button-contact:hover {
+    background-color: #414141;
+}
+
+.button-std {
+    background-color: #89c331;
+}
+
+.button-std:hover {
+    background-color: #6b9425;
+}
+
+.button-ult {
+    background-color: #f04a56;
+}
+
+.button-ult:hover {
+    background-color: #d2404b;
+}
+
+.button-prm {
+    background-color: #20807c;
+}
+
+.button-prm:hover {
+    background-color: #1c6e6b;
+}
+
+/*Icons*/
+.first-col {
+    position: relative;
+}
+
+.fas, .far{
+    font-size: 20px;
+    margin-right: 10px;
+}
