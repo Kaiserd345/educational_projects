@@ -1,5 +1,5 @@
 # educational_projects
-Repo with my educational projects;
+Repo with my educational projects from DAN IT course;
 
 #homework1
 Simple static page;
@@ -15,3 +15,6 @@ Using floats for positioning;
 #homework4
 Page with Sign Up form and header;
 Using floats, sprites and forms markup;
+
+#homework5 
+Decorated table;
