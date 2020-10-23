@@ -14,9 +14,21 @@ a {
     color: #fff;
 }
 
+h2 {
+    text-transform: uppercase;
+}
+
 .container {
     max-width: 1170px;
     margin: 0 auto;
+}
+
+.section-title {
+    padding: 30px 0;
+    font-size: 27px;
+    font-weight: 800;
+    color: #18b4cf;
+    text-align: center;
 }
 
 /*Heder*/
@@ -51,7 +63,7 @@ header {
 }
 
 .header-logo a:hover {
-    color: #169cb4;
+    color: #18b4cf;
 }
 
 /*Navigation */
@@ -67,6 +79,7 @@ header {
     display: block;
     padding: 10px 15px;
     font-size: 15px;
+    text-transform: uppercase;
     line-height: 15px;
     /*border-bottom: 1px solid #1d2124;*/
 }
@@ -97,7 +110,7 @@ header {
     color: #169cb4;
 }
 
-    /*Section Latest News*/
+/*Section Latest News*/
 
 .latest-news {
     margin: 0;
@@ -155,3 +168,34 @@ header {
     background-color: #0e8a9f;
 }
 
+/*Most popular*/
+.most-popular {
+    background-color: #f2f2f2;
+    padding-bottom: 40px;
+}
+
+.most-popular > .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.most-popular-item {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.most-popular-item:hover {
+    transform: scale(1.1);
+    transition: all .5s ease-in-out;
+}
+
+.most-popular-item p {
+    width: 100%;
+    padding: 10px 10px;
+    text-align: center;
+    font-weight: 800;
+    background-color: #ffffff;
+}
