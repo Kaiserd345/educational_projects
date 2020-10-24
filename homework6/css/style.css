@@ -115,7 +115,7 @@ header {
 .latest-news {
     margin: 0;
     height: 375px;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("./img/header-bg.jpeg") no-repeat center center;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../img/header-bg.jpeg") no-repeat center center;
     background-size: cover;
 }
 
@@ -198,4 +198,41 @@ header {
     text-align: center;
     font-weight: 800;
     background-color: #ffffff;
+}
+
+/*Popular Clients*/
+.popular-clients {
+    display: grid;
+    align-items: center;
+    grid-template-rows: 1fr 1fr 2fr 1fr;
+    grid-template-columns: 1fr;
+    height: 590px;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../img/parallax-bg.jpeg") no-repeat center center;
+    background-size: cover;
+}
+
+.title-container{
+    grid-row: 2;
+}
+
+.clients__title {
+    font-size: 32px;
+    font-weight: 800;
+    padding: 40px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.clients-container {
+    grid-row: 3;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2vw;
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.clients__item {
+    text-align: center;
 }
