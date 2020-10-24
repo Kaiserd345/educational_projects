@@ -216,4 +216,23 @@ body .section-title {
   align-self: center;
   text-align: center;
 }
+.top-rated {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr 190px;
+}
+.top-rated__title {
+  grid-column: 1 / span 7;
+  grid-row: 1;
+}
+.top-rated__item {
+  grid-row: 2;
+}
+.top-rated__item img {
+  width: 100%;
+}
+.top-rated__item:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+}
 /*# sourceMappingURL=style.css.map */
