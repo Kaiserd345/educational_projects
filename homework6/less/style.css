@@ -138,6 +138,7 @@ body .section-title {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(9, 80px);
+  grid-auto-flow: dense;
   column-gap: 10px;
   row-gap: 5px;
 }
@@ -219,7 +220,7 @@ body .section-title {
 .top-rated {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: 1fr 190px;
+  grid-template-rows: 1fr 1fr;
 }
 .top-rated__title {
   grid-column: 1 / span 7;
@@ -234,5 +235,93 @@ body .section-title {
 .top-rated__item:hover {
   transform: scale(1.1);
   transition: all 0.5s ease-in-out;
+}
+.hot-news {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 255px auto auto 255px;
+  column-gap: 15px;
+  row-gap: 15px;
+  grid-template-areas: "item1 item1 item1 item2" "item3 item3 item4 item4" "item5 item5 item6 item6" "item7 item8 item8 item8";
+}
+.hot-news-item {
+  position: relative;
+}
+.hot-news-item .item-info {
+  background: #f9f7f7;
+  text-align: right;
+  padding: 25px;
+}
+.hot-news-item .item-info h3 {
+  font-size: 18px;
+  padding: 10px 0;
+}
+.hot-news-item .item-img {
+  overflow: hidden;
+}
+.hot-news-item:nth-child(1) {
+  grid-area: item1;
+}
+.hot-news-item:nth-child(2) {
+  grid-area: item2;
+}
+.hot-news-item:nth-child(3) {
+  grid-area: item3;
+}
+.hot-news-item:nth-child(4) {
+  grid-area: item4;
+}
+.hot-news-item:nth-child(5) {
+  grid-area: item5;
+}
+.hot-news-item:nth-child(6) {
+  grid-area: item6;
+}
+.hot-news-item:nth-child(7) {
+  grid-area: item7;
+}
+.hot-news-item:last-child {
+  grid-area: item8;
+}
+.hot-news .item-std {
+  display: grid;
+  grid-auto-columns: 50% 50%;
+}
+.hot-news .item-std .item-img {
+  grid-column: 1;
+}
+.hot-news .item-std .item-img img {
+  height: 100%;
+}
+.hot-news .item-std .item-info {
+  grid-column: 2;
+}
+.hot-news .item-small {
+  display: grid;
+  grid-auto-rows: 4fr 1fr;
+}
+.hot-news .item-small .item-img {
+  grid-row: 1;
+}
+.hot-news .item-small .item-img img {
+  width: 100%;
+}
+.hot-news .item-small .item-info {
+  grid-row: 2;
+  text-align: center;
+  padding: 5px;
+}
+.hot-news .item-big {
+  display: grid;
+  grid-auto-rows: 60% 40%;
+}
+.hot-news .item-big .item-img {
+  grid-row: 1;
+}
+.hot-news .item-big .item-img img {
+  height: 100%;
+}
+.hot-news .item-big .item-info {
+  grid-row: 2;
 }
 /*# sourceMappingURL=style.css.map */
