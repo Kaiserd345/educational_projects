@@ -250,6 +250,11 @@ body .section-title {
   font-size: 13px;
 }
 .footer__logo {
-  background-image: url("./img/foote");
+  position: relative;
+}
+.footer__logo svg:first-child {
+  position: absolute;
+  top: 0;
+  left: -40px;
 }
 /*# sourceMappingURL=style.css.map */
