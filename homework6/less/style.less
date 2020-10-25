@@ -5,6 +5,7 @@
 @links-white: #ffffff;
 @links-white-hover: #b7b1b1;
 @heading-white: #ffffff;
+@bg-dark: #1d2124;
 
 * {
   padding: 0;
@@ -261,6 +262,28 @@ body {
     &:hover {
       transform: scale(1.1);
       transition: all .5s ease-in-out;
+    }
+  }
+}
+
+//Footer
+.footer {
+  background-color: @bg-dark;
+  height: 80px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  &__rights {
+    color: @links-white;
+    font-size: 13px;
+  }
+  &__logo {
+    background-image: url("./img/foote");
+    &:before {
+
     }
   }
 }

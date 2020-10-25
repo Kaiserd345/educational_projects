@@ -235,4 +235,21 @@ body .section-title {
   transform: scale(1.1);
   transition: all 0.5s ease-in-out;
 }
+.footer {
+  background-color: #1d2124;
+  height: 80px;
+}
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.footer__rights {
+  color: #ffffff;
+  font-size: 13px;
+}
+.footer__logo {
+  background-image: url("./img/foote");
+}
 /*# sourceMappingURL=style.css.map */
