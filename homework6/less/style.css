@@ -327,6 +327,7 @@ body .section-title {
 .footer {
   background-color: #1d2124;
   height: 80px;
+  margin-top: 45px;
 }
 .footer .container {
   display: flex;
