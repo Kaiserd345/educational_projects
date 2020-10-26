@@ -6,6 +6,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
+  line-height: 1.75;
 }
 body a {
   text-decoration: none;
@@ -88,24 +89,34 @@ body .section-title {
   color: #ffffff;
 }
 .latest-news {
-  margin: 0;
-  height: 375px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/header-bg.jpeg") no-repeat center center;
+  min-height: calc(100vh - 70px);
   background-size: cover;
+  background-position: center;
+  position: relative;
+  align-content: center;
+}
+.latest-news:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #1d2124;
+  opacity: 0.41;
 }
 .latest-news-content {
+  z-index: 1;
   text-align: center;
-  padding: 120px;
+  padding: 60px 15px;
 }
 .latest-news-content h2 {
-  font-size: 27px;
+  font-size: 30px;
   font-weight: 800;
   color: #ffffff;
+  margin: 20px 0;
 }
-.latest-news-content .latest-news-buttons {
-  margin-top: 35px;
-}
-.latest-news-content .latest-news-buttons div {
+.latest-news-content .latest-news-buttons .button {
   display: inline-block;
   width: 170px;
   height: 55px;
