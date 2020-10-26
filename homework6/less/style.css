@@ -149,7 +149,7 @@ body .section-title {
   background-color: #f2f2f2;
 }
 .most-popular-content {
-  padding: 10px;
+  padding: 10px 10px 40px 10px;
   column-gap: 15px;
   grid-template-columns: repeat(3, 1fr);
 }
@@ -165,25 +165,35 @@ body .section-title {
   background-color: #ffffff;
 }
 .popular-clients {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  grid-template-rows: 150px 1fr 1fr 150px;
-  height: 590px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/parallax-bg.jpeg") no-repeat center center;
+  align-content: center;
+  position: relative;
+  height: 50vh;
+  background-position: center;
   background-size: cover;
 }
-.popular-clients__title {
+.popular-clients:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #1d2124;
+  opacity: 0.41;
+}
+.popular-clients-content {
+  z-index: 1;
+}
+.popular-clients-title {
   position: relative;
-  grid-column: 2;
-  grid-row: 2;
   font-size: 32px;
   font-weight: 800;
   padding: 40px;
+  margin-bottom: 40px;
   color: #ffffff;
   text-align: center;
-  margin-bottom: 60px;
 }
-.popular-clients__title:after {
+.popular-clients-title:after {
   display: block;
   position: absolute;
   content: "";
@@ -192,14 +202,11 @@ body .section-title {
   bottom: 0;
   border-bottom: 2px solid #14b9d5;
 }
-.popular-clients-content {
-  grid-column: 2;
-  grid-row: 3;
-  display: grid;
+.popular-clients-items {
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 30px;
+  padding: 10px;
 }
-.popular-clients-content__item {
+.popular-clients-items__item {
   align-self: center;
   text-align: center;
 }
