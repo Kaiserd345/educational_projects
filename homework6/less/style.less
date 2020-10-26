@@ -256,8 +256,10 @@ body {
 
 //Section Hot News
 .hot-news-content {
+  padding: @gutter;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 255px auto auto 255px;
+  //grid-template-rows: 255px auto auto 255px;
+  grid-template-rows: 1fr 2fr 2fr 1fr;
   grid-gap: @gutter;
   grid-template-areas:
   "item1 item1 item1 item2"
@@ -267,17 +269,37 @@ body {
 
   &-item {
     position: relative;
+    color: @text-dark;
+    background-color: #f9f7f7;
+    transition: background-color .25s ease;
+    overflow: hidden;
+    &:hover {
+      background-color: darken(#f9f7f7, 3%);
+      .item-img {
+        transform: scale(1.05);
+      }
+      .item-info {
+        color: @text-dark;
+      }
+
+    }
     .item-info {
-      background: #f9f7f7;
       text-align: right;
-      padding: 25px;
+      padding: calc(@gutter + 10px);
       h3 {
         font-size: 18px;
-        padding: 10px 0;
+        padding: @gutter 0;
+        color: lighten(@text-dark, 30%);
+        transition: color .3s ease;
       }
     }
     .item-img {
+      display: block;
       overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: transform .5s ease;
     }
     &:nth-child(1) {
       grid-area: item1
@@ -308,9 +330,6 @@ body {
     grid-auto-columns: 50% 50%;
     .item-img {
       grid-column: 1;
-      img {
-        height: 100%;
-      }
     }
     .item-info {
       grid-column: 2;
