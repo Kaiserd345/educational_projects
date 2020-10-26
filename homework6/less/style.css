@@ -18,6 +18,9 @@ body .container {
   max-width: 1170px;
   margin: 0 auto;
 }
+body .grid {
+  display: grid;
+}
 body .section-title {
   padding: 30px 0;
   font-size: 27px;
@@ -220,7 +223,7 @@ body .section-title {
 .top-rated {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr;
 }
 .top-rated__title {
   grid-column: 1 / span 7;
