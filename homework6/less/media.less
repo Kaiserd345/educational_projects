@@ -1,0 +1,158 @@
+@import "variables";
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+  .most-popular {
+    &-content {
+      grid-template-columns: 1fr;
+    }
+    &-column {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      margin: 5px 0;
+    }
+    &-item {
+      width: 49%;
+      img {
+        min-height: 90%;
+      }
+      &:first-of-type {
+        margin: @gutter @gutter 0 0;
+      }
+    }
+  }
+  .hot-news-content {
+
+  }
+}
+/**/
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  .header-nav {
+    display: none;
+  }
+  .header-right {
+    .menu-button {
+      display: inline-block;
+    }
+  }
+}
+/**/
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+.most-popular {
+    &-content {
+      grid-template-columns: 1fr;
+    }
+    &-column {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin: 5px auto;
+    }
+    &-item {
+      width: 100%;
+      img {
+        min-height: 90%;
+      }
+      &:first-of-type {
+        margin: @gutter @gutter 0 0;
+      }
+    }
+  }
+
+.popular-clients-items {
+  grid-template-columns: 1fr 1fr;
+  &-item {
+    margin-bottom: @gutter;
+  }
+}
+
+.hot-news-content {
+  &-item {
+    &:nth-child(1) {
+      grid-column: span 4;
+    }
+    &:nth-child(2) {
+      grid-column: span 4;
+    }
+    &:nth-child(3) {
+      grid-column: span 4;
+    }
+    &:nth-child(4) {
+      grid-column: span 4;
+    }
+    &:nth-child(5) {
+      grid-column: span 4;
+    }
+    &:nth-child(6) {
+      grid-column: span 4;
+    }
+    &:nth-child(7) {
+      grid-column: span 4;
+    }
+    &:nth-child(8) {
+      grid-column: span 4;
+    }
+  }
+}
+
+}
+/**/
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  .popular-clients-items {
+    grid-template-columns: 1fr;
+  }
+}
+/**/
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px){
+
+}
+/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+/**/
+
