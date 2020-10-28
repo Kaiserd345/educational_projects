@@ -8,6 +8,17 @@ body, html {
   overflow: hidden;
 }
 
+button {
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  padding: 5px;
+  outline: none;
+}
+button:active {
+  background: white;
+}
+
 #titles {
   position: absolute;
   width: 18em;
