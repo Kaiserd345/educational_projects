@@ -55,12 +55,6 @@ body
     transition: transform .4s linear
     transform: perspective(550px) rotateX(8deg) scale(1.1)
 
-
-.sticky
-  position: fixed
-  top: 0
-  width: 100%
-
 .header
   position: relative
   height: 100vh
@@ -75,6 +69,13 @@ body
     height: 114px
     margin-top: 20px
     background-color: #fff
+    transition: height .3s ease
+  .sticky
+    position: fixed
+    top: 0
+    width: 100%
+    margin-top: 0
+    height: 70px
   &-logo
     font-size: 36px
     text-decoration: none
