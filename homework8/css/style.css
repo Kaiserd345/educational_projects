@@ -66,6 +66,50 @@ body {
   transform: skewY(-5deg);
 }
 
+.menu-btn {
+  position: relative;
+  display: none;
+  justify-items: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger {
+  width: 30px;
+  height: 3px;
+  background: #3e4c4e;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger:before, .menu-btn__burger:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: #3e4c4e;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger:before {
+  transform: translateY(-8px);
+}
+.menu-btn__burger:after {
+  transform: translateY(8px);
+}
+
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-30px);
+  background: transparent;
+}
+.menu-btn.open .menu-btn__burger:before {
+  transform: rotate(45deg) translate(15px, -15px);
+}
+.menu-btn.open .menu-btn__burger:after {
+  transform: rotate(-45deg) translate(15px, 15px);
+}
+
 .header {
   position: relative;
   min-height: 90vh;
@@ -104,6 +148,9 @@ body {
   text-transform: uppercase;
   color: #14afca;
   font-weight: bold;
+}
+.header-nav {
+  box-sizing: border-box;
 }
 .header-nav-list {
   list-style: none;
@@ -150,7 +197,7 @@ body {
 
 .companies {
   position: relative;
-  height: 80vh;
+  height: 60vh;
   padding-top: 12em;
 }
 .companies:before {
@@ -168,7 +215,7 @@ body {
 .companies-item {
   align-self: center;
   display: block;
-  height: 40px;
+  height: 2.7em;
 }
 .companies-item-img {
   width: 100%;
@@ -228,24 +275,52 @@ body {
 /* Large Devices, Wide Screens */
 /**/
 /* Medium Devices, Desktops */
-.companies-items {
-  grid-template-columns: 1fr 1fr;
+@media only screen and (max-width: 992px) {
+  .companies-items {
+    grid-template-columns: 1fr 1fr;
+  }
 }
-
 /**/
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
+  .header-sticky-top {
+    justify-content: space-between;
+  }
   .header-logo {
+    margin-left: 15px;
     font-size: 26px;
   }
   .header-nav {
-    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    transition: transform 0.7s ease;
+    transform: translateX(320px);
+  }
+  .header-nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    background-color: #ffffff;
+  }
+  .header-nav ul a {
+    padding-left: 50px;
+    width: 100%;
+  }
+  .header .nav-show {
+    transform: translateX(0px);
+  }
+  .header .menu-btn {
+    display: flex;
   }
 
   .section-title {
     font-size: 40px;
   }
 
+  .companies {
+    height: 80vh;
+  }
   .companies-items {
     grid-template-columns: 1fr;
   }

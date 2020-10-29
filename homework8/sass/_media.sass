@@ -8,25 +8,46 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-.companies
-  &-items
-    grid-template-columns: 1fr 1fr
+  .companies
+    &-items
+      grid-template-columns: 1fr 1fr
 
 /**/
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
   .header
+    &-sticky-top
+      justify-content: space-between
     &-logo
+      margin-left: $gutter
       font-size: 26px
     &-nav
-      display: none
+      position: absolute
+      top: 70px
+      right: 0
+      transition: transform .7s ease
+      transform: translateX(320px)
+      ul
+        display: flex
+        flex-direction: column
+        width: 320px
+        background-color: $bg-white
+        a
+          padding-left: 50px
+          width: 100%
+    .nav-show
+      transform: translateX(0px)
+
+    .menu-btn
+      display: flex
 
   .section
     &-title
       font-size: 40px
 
   .companies
+    height: 80vh
     &-items
       grid-template-columns: 1fr
     &-item
