@@ -131,6 +131,7 @@ body {
 
 .section-content {
   text-align: center;
+  padding: 5px 15px;
 }
 .section-title {
   font-size: 60px;
@@ -147,28 +148,29 @@ body {
   margin-top: calc(30px);
 }
 
-.section-companies {
+.companies {
   position: relative;
-  height: 100vh;
+  height: 80vh;
+  padding-top: 200px;
 }
-.section-companies:before {
+.companies:before {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%), url("../img/bg2.jpg");
 }
-.section-companies .section-content {
-  padding-top: 170px;
+.companies .section-sub-title {
+  color: #ffffff;
 }
-.section-companies .companies-items {
+.companies-items {
   grid-template-columns: repeat(4, 1fr);
   column-gap: 15px;
   row-gap: calc(45px);
   margin-top: 50px;
 }
-.section-companies .companies-items .companies-item {
+.companies-item {
   align-self: center;
   display: block;
   height: 40px;
 }
-.section-companies .companies-items .companies-item-img {
+.companies-item-img {
   width: 100%;
   height: 100%;
   background-size: contain;
@@ -176,10 +178,37 @@ body {
   background-position: center;
 }
 
+.meet:before {
+  height: 800px;
+}
+.meet:after {
+  height: 800px;
+}
 .meet-items {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: calc(60px);
   margin-top: 50px;
+}
+
+.testimonials {
+  position: relative;
+  height: 80vh;
+  padding-top: 200px;
+}
+.testimonials:before {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%), url("../img/bg3.jpg");
+}
+.testimonials .section-sub-title {
+  color: #ffffff;
+}
+.testimonials .section-text {
+  color: #869c9f;
+}
+.testimonials-name {
+  display: inline-block;
+  width: 80%;
+  text-align: right;
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=style.css.map */
