@@ -9,6 +9,8 @@ body
   font-size: 16px
   color: $text-grey
   line-height: 1.7
+  max-width: 100vw
+  overflow-x: hidden
 
 .grid
   display: grid
@@ -18,7 +20,10 @@ body
   margin: 0 auto
 
 .parallax
-  &:after
+  //max-width: 100vw
+  overflow-x: hidden
+  overflow-y: hidden
+  &:before
     content: ""
     position: absolute
     top: 0
@@ -32,40 +37,33 @@ body
     z-index: -2
     transform-origin: center
     transition: transform .4s linear
-    transform: perspective(550px) rotateX(8deg) scale(1.2)
+    transform: perspective(750px) rotateX(8deg) scale(1.2)
     //need to add bg-img for sections where it used
 
 .skew-section
   position: relative
+  padding-bottom: 100px
+  &:before, &:after
+    content: ""
+    position: absolute
+    height: 550px
+    width: 50%
+    background-color: $bg-white
+    top: 0
+    margin-top: -130px
+    z-index: -1
   &:before
-    content: ""
-    position: absolute
-    height: 500px
-    width: 50%
-    background-color: $bg-white
-    top: 0
     right: 50%
-    transform: skewY(10deg)
-    margin-top: -130px
-    z-index: -1
-
+    transform: skewY(5deg)
   &:after
-    content: ""
-    position: absolute
-    height: 500px
-    width: 50%
-    background-color: $bg-white
-    top: 0
     left: 50%
-    transform: skewY(-10deg)
-    margin-top: -130px
-    z-index: -1
+    transform: skewY(-5deg)
 
 .header
   position: relative
   min-height: 90vh
   min-width: 100vw
-  &:after
+  &:before
     background-image: $grd-bbw, url('../img/bg1.jpg') //bg-img for parallax
   &-sticky-top
     display: flex
@@ -78,6 +76,7 @@ body
     margin-top: 20px
     background-color: #fff
     transition: height .3s ease
+    z-index: 2
   .sticky
     position: fixed
     top: 0
@@ -113,19 +112,52 @@ body
     padding: 10px 30px
     color: $text-white
     text-transform: uppercase
-
+//All Sections
 .section
   &-content
     text-align: center
   &-title
     font-size: 60px
     font-weight: bold
+    text-transform: uppercase
+    line-height: 1.5
     color: $accent
-    padding: $gutter
+    padding: 0 $gutter
   &-sub-title
     font-size: 18px
   &-text
     margin-top: calc(#{$gutter * 2})
+//Section-companies
+.section-companies
+  position: relative
+  height: 100vh
+  &:before
+    background-image: $grd-bw, url('../img/bg2.jpg') //bg-img for parallax
+  .section-content
+    padding-top: 170px
+  .companies-items
+    grid-template-columns: repeat(4, 1fr)
+    column-gap: $gutter
+    row-gap: calc(#{$gutter * 3})
+    margin-top: 50px
+    .companies-item
+      //justify-self: center
+      align-self: center
+      display: block
+      height: 40px
+      &-img
+        width: 100%
+        height: 100%
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: center
+//Section Meet
+.meet
+  &-items
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: calc(#{$gutter * 4})
+    margin-top: 50px
+
 
 
 
