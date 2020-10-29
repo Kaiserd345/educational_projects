@@ -81,7 +81,7 @@ body {
   height: 3px;
   background: #3e4c4e;
   border-radius: 5px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .menu-btn__burger:before, .menu-btn__burger:after {
   content: "";
@@ -90,7 +90,7 @@ body {
   height: 3px;
   background: #3e4c4e;
   border-radius: 5px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .menu-btn__burger:before {
   transform: translateY(-8px);
@@ -175,6 +175,10 @@ body {
   padding: 10px 30px;
   color: #ffffff;
   text-transform: uppercase;
+}
+
+.link-active {
+  color: #14afca;
 }
 
 .section-content {
@@ -294,8 +298,7 @@ body {
     position: absolute;
     top: 70px;
     right: 0;
-    transition: transform 0.7s ease;
-    transform: translateX(320px);
+    transform: translateX(520px);
   }
   .header-nav ul {
     display: flex;
@@ -308,6 +311,7 @@ body {
     width: 100%;
   }
   .header .nav-show {
+    transition: transform 0.7s ease;
     transform: translateX(0px);
   }
   .header .menu-btn {
