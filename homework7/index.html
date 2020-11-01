@@ -11,22 +11,26 @@
 <body>
 <button type="button" id="switch">Play Sound</button>
 <section>
-    <div id="titles">
-        <div id="title-content">
+    <div class="title">
+        <div class="title-content">
             <h1>EPISODE 0</h1>
             <h2>ATTACK OF THE FRONTEND</h2>
-            When there is no more hope.
-            When Winter is coming.
-            When the palm trees are tired ...
-            <br>
-            <br>
-            A young padawan developer (a.k.a me) came to the realm - to conquer all the peaks. He learns incredibly fast ... The judge of galaxies depends on which side he takes JavaScript or PHP. Powerful corporations began hunting him down. Only time will tell where it will lead ...
+            <p>
+                When there is no more hope.
+                When Winter is coming.
+                When the palm trees are tired ...
+            </p>
+            <p>
+                A young padawan developer (a.k.a me) came to the realm - to conquer all the peaks. He learns incredibly
+                fast ... The judge of galaxies depends on which side he takes JavaScript or PHP. Powerful corporations
+                began hunting him down. Only time will tell where it will lead ...
+            </p>
         </div>
     </div>
 </section>
 <script>
-    window.onload = function() {
-        let audio = new Audio ('./sounds/SW_main.mp3');
+    window.onload = function () {
+        let audio = new Audio('./sounds/SW_main.mp3');
         const switcher = document.getElementById('switch');
         switcher.addEventListener('click', () => {
             if (switcher.classList.contains('playing')) {
