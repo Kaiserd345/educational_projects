@@ -48,19 +48,19 @@ body .section-title {
   display: flex;
   align-items: center;
 }
-.header-logo img {
+.header-logo-img {
   width: 25px;
   height: 25px;
   margin: 0 10px 0 25px;
 }
-.header-logo a {
+.header-logo-link {
   display: inline-block;
   font-size: 22px;
   font-weight: 800;
   margin-left: 10px;
   line-height: 25px;
 }
-.header-logo a:hover {
+.header-logo-link:hover {
   color: #1095ab;
 }
 .header-nav ul {
@@ -119,13 +119,13 @@ body .section-title {
   text-align: center;
   padding: 60px 15px;
 }
-.latest-news-content h2 {
+.latest-news-content-title {
   font-size: 30px;
   font-weight: 800;
   color: #f1f1f1;
   margin: 20px 0;
 }
-.latest-news-content .latest-news-buttons .button {
+.latest-news-content-buttons .button {
   display: inline-block;
   width: 170px;
   height: 55px;
@@ -135,7 +135,7 @@ body .section-title {
   border-radius: 5px;
   transition: background-color 0.35s ease;
 }
-.latest-news-content .latest-news-buttons a {
+.latest-news-content-buttons a {
   display: block;
   text-align: center;
   height: 100%;
@@ -143,16 +143,16 @@ body .section-title {
   font-size: 18px;
   line-height: 55px;
 }
-.latest-news-content .latest-news-buttons .button-subscribe {
+.latest-news-content-buttons .button-subscribe {
   background-color: #89ca62;
 }
-.latest-news-content .latest-news-buttons .button-subscribe:hover {
+.latest-news-content-buttons .button-subscribe:hover {
   background-color: #6fbe40;
 }
-.latest-news-content .latest-news-buttons .button-articles {
+.latest-news-content-buttons .button-articles {
   background-color: #14b9d5;
 }
-.latest-news-content .latest-news-buttons .button-articles:hover {
+.latest-news-content-buttons .button-articles:hover {
   background-color: #1095ab;
 }
 .most-popular {
@@ -345,7 +345,6 @@ body .section-title {
   top: 15px;
   left: -30px;
 }
-/*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
   .most-popular-content {
@@ -451,18 +450,5 @@ body .section-title {
     grid-template-columns: 1fr;
   }
 }
-/**/
-/* Custom, iPhone Retina */
-/**/
-/*==========  Mobile First  ==========*/
-/* Custom, iPhone Retina */
-/**/
-/* Extra Small Devices, Phones */
-/**/
-/* Small Devices, Tablets */
-/**/
-/* Medium Devices, Desktops */
-/**/
-/* Large Devices, Wide Screens */
 /**/
 /*# sourceMappingURL=style.css.map */
