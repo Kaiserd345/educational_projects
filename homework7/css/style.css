@@ -19,7 +19,7 @@ button:active {
   background: white;
 }
 
-#titles {
+.title {
   position: absolute;
   width: 18em;
   height: 50em;
@@ -33,7 +33,7 @@ button:active {
   transform-origin: 50% 100%;
   transform: perspective(300px) rotateX(25deg);
 }
-#titles:after {
+.title:after {
   position: absolute;
   content: "";
   left: 0;
@@ -43,11 +43,10 @@ button:active {
   background-image: linear-gradient(top, black 0%, transparent 100%);
   pointer-events: none;
 }
-#titles h1, #titles h2 {
+.title h1, .title h2 {
   text-align: center;
 }
-
-#title-content {
+.title-content {
   position: absolute;
   top: 100%;
   animation: scroll 80s linear 1s infinite;
