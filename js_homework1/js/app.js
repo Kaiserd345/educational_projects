@@ -18,5 +18,25 @@
 //     быть введенная ранее информация).
 "use strict"
 
-const userFirstName = prompt('Hi, what is your name?', '')
-const userCurrentAge = prompt('How old are you?', '');
+let userFirstName = prompt('Hi, what is your name?', '')
+let userCurrentAge = Number(prompt('How old are you?', ''));
+
+if (userFirstName !== null || typeof(userCurrentAge) === 'number') {
+    userFirstName = prompt('Hi, what is your name?', userFirstName)
+    userCurrentAge = Number(prompt('How old are you?', userCurrentAge));
+}
+
+if (userCurrentAge < 18) {
+    alert(`You are not allowed to visit this website`);
+} else {
+    if (userCurrentAge >= 18 && userCurrentAge <= 22) {
+        const confirmation = confirm(`Are you sure you want to continue?`);
+        if (confirmation === true) {
+            alert(`Welcome ${userFirstName}`)
+        } else {
+            alert(`You are not allowed to visit this website`);
+        }
+    } else {
+        alert(`Welcome ${userFirstName}`);
+    }
+}
