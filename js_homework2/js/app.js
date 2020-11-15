@@ -20,21 +20,34 @@
 // Если хотя бы одно из чисел не соблюдает условие валидации, указанное выше, вывести сообщение
 // об ошибке, и спросить оба числа заново.
 
-const userNumber = Number(prompt('Input number please', ''));
-const resultArr = [];
+let userNumber = prompt('Input number please:', '');
 
-for (let i = 1; i <= userNumber; i++) {
-    if (i % 5 === 0) {
-        resultArr.push(i);
+function checkDividing () {
+    const resultArr = [];
+
+    //Check dividing
+    for (let i = 1; i <= +userNumber; i++) {
+        if (i % 5 === 0) {
+            resultArr.push(i);
+        }
+    }
+
+    //Check and log array of results
+    if (resultArr.length !== 0) {
+        let resultString = `This number can be divide on ${userNumber}:`;
+        for (let i = 0; i < resultArr.length; i++) {
+            resultString += ` ${resultArr[i]}`;
+        }
+        console.log(resultString);
+    } else {
+        console.log(`Sorry, no numbers`);
     }
 }
 
-if (resultArr.length !== 0) {
-    let resultString = `This number can be divide on ${userNumber}:`;
-    for (let i = 0; i < resultArr.length; i++) {
-        resultString += ` ${resultArr[i]}`;
-    }
-    console.log(resultString);
-} else {
-    console.log(`Sorry, no numbers`);
+//Check input number
+while (userNumber === '' || isNaN(userNumber)) {
+    alert("It's not a number");
+    userNumber = prompt('Input number please:', '');
 }
+
+checkDividing();
