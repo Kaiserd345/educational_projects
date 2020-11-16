@@ -16,23 +16,34 @@
 //  указал не числа, - спросить оба числа заново (при этом значением по умолчанию для каждой из переменных
 //  должна быть введенная ранее информация).
 const userSign = prompt('Please input operation "+", "-", "*" or "/"', '+');
-const userA = prompt('Please input first operand', 2);
-const userB = prompt('Please input second operand', 6);
+let operand1 = '';
+let operand2 = '';
+
+while (operand1 === '' || isNaN(operand1)) {
+    operand1 = prompt('Please input first operand', `${operand1}`);
+}
+
+while (operand2 === '' || isNaN(operand2)) {
+    operand2 = prompt('Please input second operand', `${operand2}`);
+}
+
 
 function calcRequest (a, b, sign) {
     let result;
+    a = +a;
+    b = +b;
     switch (sign) {
         case '+':
-            result = +a + +b;
+            result = a + b;
             break
         case '-':
-            result = +a - +b;
+            result = a - b;
             break
         case '*':
-            result = +a * +b;
+            result = a * b;
             break
         case '/':
-            result = +a / +b;
+            result = a / b;
             break
         default:
             result = 'Something goes wrong';
@@ -40,4 +51,4 @@ function calcRequest (a, b, sign) {
     return result
 }
 
-console.log(calcRequest(userA, userB, userSign));
+console.log(calcRequest(operand1, operand2, userSign));
