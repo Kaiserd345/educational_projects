@@ -15,3 +15,29 @@
 //  - После ввода данных добавить проверку их корректности. Если пользователь не ввел числа, либо при вводе
 //  указал не числа, - спросить оба числа заново (при этом значением по умолчанию для каждой из переменных
 //  должна быть введенная ранее информация).
+const userSign = prompt('Please input operation "+", "-", "*" or "/"', '+');
+const userA = prompt('Please input first operand', 2);
+const userB = prompt('Please input second operand', 6);
+
+function calcRequest (a, b, sign) {
+    let result;
+    switch (sign) {
+        case '+':
+            result = +a + +b;
+            break
+        case '-':
+            result = +a - +b;
+            break
+        case '*':
+            result = +a * +b;
+            break
+        case '/':
+            result = +a / +b;
+            break
+        default:
+            result = 'Something goes wrong';
+    }
+    return result
+}
+
+console.log(calcRequest(userA, userB, userSign));
